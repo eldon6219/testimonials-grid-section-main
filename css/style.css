@@ -1,0 +1,209 @@
+/* start global  */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --font-size: 13px;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    background-color: var(--Light-grayish-blue);
+    padding: 4rem 0 ;
+
+}
+@media(min-width:600px){
+    body {
+        padding: 1.5rem;
+    }
+}
+
+
+/* end  global  */
+/* start main */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-width: 22rem;
+    grid-gap: 2rem;
+}
+
+@media(min-width:600px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        max-width: 81rem;
+    }
+}
+
+main .card {
+    padding:  2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+main .card .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+main .card .head img {
+    border-radius: 1in;
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+main .card .head .head-text {
+    font-size: var(--font-size);
+}
+
+main .card .head .head-text h1 {
+    font-size: var(--font-size);
+    font-weight: 500;
+    color: var(--White);
+    margin-bottom: .2rem;
+}
+
+main .card .head .head-text p {
+    color: var(--White);
+    opacity: 50%;
+}
+
+main .card .content h2 {
+    color: var(--White);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+main .card .content p {
+    color: var(--Light-gray);
+    opacity: 70%;
+    line-height: 1.5;
+}
+
+main .card.daniel {
+    /* grid-column: 1/3;
+    grid-row: 1/2; */
+    background-color: var(--Moderate-violet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 1rem;
+    
+}
+@media(min-width:600px){
+    main .card.daniel{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-position: top right 6rem;
+    }
+}
+
+main .card.daniel .head img {
+    border: 2px solid rgb(232, 146, 232);
+}
+
+main .card.jonathan {
+    /* grid-column: 3/4;
+    grid-row: 1/2; */
+    background-color: var(--Very-dark-grayish-blue);
+}
+@media(min-width:600px){
+    main .card.jonathan {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+}
+main .card.kira {
+    /* grid-column: 4/5;
+    grid-row: 1/3; */
+    background-color: var(--White);
+}
+@media(min-width:600px){
+    main .card.kira{
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+}
+
+.card.kira .head .head-text h1 {
+    color: var(--Very-dark-blackish-blue)
+}
+
+.card.kira .head .head-text p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 50%;
+}
+
+.card.kira .content h2 {
+    color: var(--Very-dark-blackish-blue);
+    font-weight: 600;
+}
+
+.card.kira .content p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 70%;
+}
+
+.card.Jeanette {
+    /* grid-column: 1/2; */
+    background-color: var(--White);
+}
+@media(min-width:600px){
+    main .card.Jeanette{
+        grid-column: 1/2;
+        width: 18rem;
+    }
+}
+
+.card.Jeanette .head .head-text h1 {
+    color: var(--Very-dark-blackish-blue);
+
+}
+
+.card.Jeanette .head .head-text p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 50%;
+}
+
+.card.Jeanette .content h2 {
+    color: var(--Very-dark-blackish-blue);
+    font-weight: 600;
+}
+
+.card.Jeanette .content p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 70%;
+}
+
+.card.Patrick {
+    /* grid-column: 2/4; */
+    background-color: var(--Very-dark-blackish-blue);
+}
+@media(min-width:600px){
+    .card.card.Patrick{
+        grid-column: 2/4;
+    }
+}
+
+.card.Patrick .head img {
+    border: 2px solid var(--Moderate-violet);
+}
+
+/* end main */
